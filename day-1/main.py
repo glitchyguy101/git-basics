@@ -1,0 +1,1 @@
+print("main.py script in day-1 folder in django branch")
