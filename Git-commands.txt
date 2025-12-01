@@ -1,0 +1,117 @@
+## Git Commands ##
+
+Git is the version control system that is used to track changes of your code file.
+Github is a Web-based hosting service for the Git Repositories.
+
+1. git status => repository status
+2. git init => command will create a new folder on your system and initialize it as a git repository. This adds a hidden .git folder to your project.
+
+Complete git flow:-
+
+    WRITE -->(staging area) --> ADD -->(Repo) --> COMMIT --> (Github) --> PUSH
+
+3.git add <file2_name> <file2_name>  OR  git add .
+
+4. git commit -m "commit message"
+
+5.git log (gives full logs)  OR git log --oneline  (short logs)
+
+6. gitignore :- Gitignore is a file that tells git which files and folders to ignore. It is a way to prevent git from tracking certain files or folders.
+
+## Branches:-
+
+1. git branch => This command lists all the branches in the current repository.
+2. git branch <branch_name> =>  This command creates a new branch.
+3. git switch <branch_name>  OR  git checkout <branch_name>  =>This command switches to the <branch_name>.
+4. git switch -c dark-mode  => This command creates a new branch called dark-mode. the -c flag is used to create a new branch.
+
+## Merging :-
+
+1. git checkout main - This command switches to the main branch.
+2. git merge bug-fix - This command merges the bug-fix branch into the main branch.
+
+
+## Rename a branch:-
+
+1. git branch -m <old-branch-name> <new-branch-name>
+
+## Delete a branch:-
+
+1. git branch -d <branch-name>
+
+## Checkout branch:-
+
+1. git checkout <branch-name>
+
+##List all branchs:-
+
+1. git branch
+
+
+### Diff, Stash and Tags: https://docs.chaicode.com/youtube/chai-aur-git/diff-stash-tags/
+
+## Diff:-
+
+1. git diff --staged => This command shows the changes between your last commit and the staging area (i.e., changes that are staged and ready to be committed).
+
+Comparing Two Branches:-
+        git diff <branch-name-one> <branch-name-two>
+
+Comparing Specific Commits::-
+        git diff <commit-hash-one> <commit-hash-two>
+
+
+## Git Stash:- Stash is a way to save your changes in a temporary location. It’s useful when switching branches without losing work. You can then come back to the file later and apply the changes.
+
+1. git stash =>  use the git stash command to save your changes in a temporary location.
+
+# Naming the stash:-
+        git stash save "work in progress on X feature"
+
+# View the stash list:-
+        git stash list
+
+# Apply the Most Recent Stash:-
+        git stash apply
+
+# Apply Specific Stash:-
+        git stash apply stash@{0}
+
+# Applying and Drop a Stash:-
+        git stash pop
+
+# Drop the stash:-
+        git stash drop
+
+# Applying stash to a specific branch:-
+        git stash apply stash@{0} <branch-name>
+
+# Clearing the stash:-
+        git stash clear
+
+
+### Git tags:-
+
+Creating a tag:-
+        1. git tag <tag-name>
+
+#Create an annotated tag:-
+        2. git tag -a <tag-name> -m "Release 1.0"
+
+
+# List all tags:-
+        3. git tag  => This command lists all the tags in your repository.
+
+# Tagging a specific commit
+        4. git tag <tag-name> <commit-hash>
+
+
+# Delete a tag
+        5.git tag -d <tag-name>
+
+# Delete tag on remote repository:- You can delete a tag on a remote repository using the following command:
+        6.git push origin :<tag-name>
+
+
+
+
