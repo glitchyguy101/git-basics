@@ -9,3 +9,7 @@ for i in range(5):
     print("Loop iteration completed.")
 
 print("main.py script in day-1 folder in django branch")
+print("main.py script in day-1 folder in django branch")
+
+def greet():
+    print("Hello from main.py!")
